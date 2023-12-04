@@ -73,6 +73,12 @@ On cherche à afficher le temps d'éxecution, par conséquent, on utilise la fon
 
 <img width="470" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/c54b3feb-b485-4979-a98a-9be06188bfcf">
 
+Dans cette question on cherche à créer la possibilité de spécifier plusieurs arguments à une commande dans notre fichier **q6.c** :
+
+<img width="298" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/715ba65b-35e2-4602-a53a-1fffa562527d">
+
+
+
 
 
 
