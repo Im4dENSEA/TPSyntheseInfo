@@ -44,6 +44,8 @@ le dernier caractère.
 Dans le fichier q3.c, on programme la commande exit pour quitter le shell.
 Tant que la commande "exit" n'est pas entrée par l'utilisateur, on éxecute le fils. L'entrée de la commande "exit" entraine l'éxécution d'une instruction "kill" qui arrête le processus.
 
+<img width="460" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/84bad72e-9800-4435-b005-b8cf4da72986">
+
 <img width="281" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/5b6de963-c3bf-4770-b600-8b9d58acff89">
 
 **Question 4**
