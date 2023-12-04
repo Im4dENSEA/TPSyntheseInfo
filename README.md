@@ -6,6 +6,9 @@
 Création du fichier "fonctions.h" contenant les différentes commandes et retour console du shell servant de fichier
 de configuration pour les prochaines questions.
 
+<img width="359" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/b8153274-d756-42c8-8e43-e0a5fe815619">
+
+
 **Question 1** 
 
 
