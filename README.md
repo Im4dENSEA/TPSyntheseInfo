@@ -56,5 +56,10 @@ Tant que la commande "exit" n'est pas entrée par l'utilisateur, on éxecute le 
 
 <img width="437" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/7322ba66-d5b4-4051-bdb0-f36063385b8c">
 
+Nous cherchons à détecter avec quel code le processus s'est terminé. On vérifie alors dans notre programme **q4.c** si le processus s'arrête par la commande de sortie "exit" ou bien par un arrêt du processus forcé.
 
+On vérifie alors sur le terminal : 
+
+
+<img width="298" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/5649c41c-ed3c-4687-9422-27a843a97b71">
 
