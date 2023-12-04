@@ -60,10 +60,10 @@ Nous cherchons à détecter avec quel code le processus s'est terminé. On véri
 
 On vérifie alors sur le terminal : 
 
-**Question 5**
-
 
 <img width="298" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/5649c41c-ed3c-4687-9422-27a843a97b71">
+
+**Question 5**
 
 On cherche à afficher le temps d'éxecution, par conséquent, on utilise la fonction clock_gettime pour obtenir l'heure de l'horloge spécifiée à laquelle on accède via les pointeurs timer_start et timer_stop.
 
