@@ -65,12 +65,13 @@ On vérifie alors sur le terminal :
 
 **Question 5**
 
-On cherche à afficher le temps d'éxecution, par conséquent, on utilise la fonction clock_gettime pour obtenir l'heure de l'horloge spécifiée à laquelle on accède via les pointeurs timer_start et timer_stop.
+On cherche à afficher le temps d'éxecution, par conséquent, on utilise la fonction clock_gettime dans notre fichier **q5.c** pour obtenir l'heure de l'horloge spécifiée à laquelle on accède via les pointeurs timer_start et timer_stop.
 
 <img width="293" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/fc42cab8-7ccd-4b7c-8eff-e9f115d8dec4">
 
+**Question 6**
 
-
+<img width="470" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/c54b3feb-b485-4979-a98a-9be06188bfcf">
 
 
 
