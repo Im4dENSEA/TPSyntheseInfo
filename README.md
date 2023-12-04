@@ -63,3 +63,9 @@ On vérifie alors sur le terminal :
 
 <img width="298" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/5649c41c-ed3c-4687-9422-27a843a97b71">
 
+
+**Question 5**
+
+ <img width="416" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/6cf55fc1-4327-4747-b879-c2a2f09359d6">
+
+
