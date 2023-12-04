@@ -10,3 +10,20 @@ de configuration pour les prochaines questions.
 
 
 ![image](https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/131f62d7-4b0b-42c5-a1d7-1b3efa76d208)
+
+Dans notre fichier "fonctions.h" on définit le message d'accueil dans la variable WELCOME ainsi
+que l'invite de commande "enseash %" dans la variable PROMPT.
+
+ A l'aide de la fonction __write__, on affiche le message.
+ La fonction __write__ prend en entrée trois arguments :
+ - STDOUT_FILENO : descripteur de fichier ouvert
+ - Un pointeur vers une zone mémoire
+ - Le nombre de caractères à afficher
+
+
+**Question 2**
+
+
+![image](https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/122cf2ea-32aa-40f9-88db-bfdeaf8b6eec)
+
+On utilise les fonctions précédentes
