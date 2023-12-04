@@ -26,4 +26,5 @@ que l'invite de commande "enseash %" dans la variable PROMPT.
 
 ![image](https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/122cf2ea-32aa-40f9-88db-bfdeaf8b6eec)
 
-On utilise les fonctions précédentes
+On utilise les fonctions précédentes ainsi qu'une boucle while pour afficher les messages dans l'invite de commande.
+Afin que les commandes puissent être comprise
