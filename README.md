@@ -36,3 +36,20 @@ le dernier caractère.
 
 <img width="373" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/4bef2b74-99f2-4020-a566-2c9df1de987f">
 
+**Question 3**
+
+
+<img width="428" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/1cd4a0ea-9ad3-47b0-826e-73de2a932c8e">
+
+Dans le fichier q3.c, on programme la commande exit pour quitter le shell.
+Tant que la commande "exit" n'est pas entrée par l'utilisateur, on éxecute le fils. L'entrée de la commande "exit" entraine l'éxécution d'une instruction "kill" qui arrête le processus.
+
+<img width="281" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/5b6de963-c3bf-4770-b600-8b9d58acff89">
+
+**Question 4**
+
+
+<img width="437" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/7322ba66-d5b4-4051-bdb0-f36063385b8c">
+
+
+
