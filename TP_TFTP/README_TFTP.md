@@ -24,3 +24,13 @@ La fonction *memset* permet d'allouer un espace de la mémoire
 
 <img width="258" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/f69ba043-cb1a-40fd-8d1d-3c8aed69d84f">
 
+**3.Réservation d'un socket de connexion vers le serveur**
+
+On crée une connexion réservant un socket vers le serveur à l'aide de la fonction socket. 
+
+<img width="253" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/36aad146-3fc7-4f97-ab0b-acbaaada9206">
+
+<img width="374" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/45fe7142-a982-4fbf-9fac-bfcd5f5b1cb6">
+
+
+
