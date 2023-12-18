@@ -80,6 +80,30 @@ De même avec Wireshark, on vérifie que la trame contient bien ce qui est atten
 
 On constate qu'on retrouve bien le fichier, toutefois il semble il y avoir du bruit ce qui perturbe légèrement la lecture de celui-ci sur la trame.
 
+**5) Pour puttftp**
+**a)  Construction d’une requête en écriture (WRQ) correctement formée, et envoi au serveur**
+
+On construit la requête WRQ de la même manière que RRQ mais avec un Opcode 02
+
+<img width="236" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/e83a8043-1ebf-4faa-9069-942a68f1a4de">
+
+On constate que la requête est bien envoyée :
+
+
+<img width="317" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/68962708-4f18-498a-9104-d5008522e44d">
+
+**b) Envoi d’un fichier constitué d’un seul paquet de données (DAT) et réception de son acquittement (ACK) ;**
+
+On construit un paquet DATA que l'on cherchera à envoyer au serveur. On récupère ensuite le paquet ACK envoyé par le serveur pour confirmer la bonne réception des données.
+
+<img width="359" alt="image" src="https://github.com/Im4dENSEA/TPSyntheseInfo/assets/146735291/f27d4af4-027c-4b8d-b0b5-7cbc374d237e">
+
+Toutefois, l'écriture de cette partie est incomplète et nous n'avons pas pût conclure sur cette partie par manque de temps.
+
+**Conclusion**
+Le TP nous a permis de mettre en place deux clients pour téléverser et télécharger un fichier en exploitant le protocole TFTP à travers deux programmes **gettftp** et **puttftp**.
+
+
 
 
 
