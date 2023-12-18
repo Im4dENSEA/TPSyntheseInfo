@@ -5,9 +5,9 @@ int main (int argc, char * argv[]){
 	//nom du prog dans argv[0]
 	//premier argument dans argv [1]
 	//argc = nb d'arguments tot
-	int portASCII_size;
+	int fileName_Size;
 	char * serverName=argv[1];
-	char * portASCII=argv[2];
+	char * file=argv[2];
 	int port;
 	
 	//verif du nb d'arg d'entrée
@@ -19,15 +19,7 @@ int main (int argc, char * argv[]){
 	
 	//récuperation des données
 	serverName = strtok(argv[1], ":");
-	portASCII = strtok(NULL, ":");
 	
-	if (portASCII == NULL){
-		portASCII = malloc(3);
-		portASCII = "69";
-		port = 69;
-	} else {
-		port = atoi(portASCII);
-	}
 	
 	struct addrinfo hints,*result;
 	memset(&hints,0,sizeof(struct addrinfo));
@@ -36,7 +28,7 @@ int main (int argc, char * argv[]){
 	hints.ai_flags= 0;
 	hints.ai_protocol= IPPROTO_UDP;
 	
-	int res=getaddrinfo(serverName,portASCII,&hints,&result);
+	int res=getaddrinfo(serverName,"1069",&hints,&result);
 	if (res) {
 		fprintf(stderr,"getaddrinfo :%s\n",gai_strerror(res));
 		exit(1);
@@ -49,24 +41,24 @@ int main (int argc, char * argv[]){
 	int sfd = socket(result->ai_family,result->ai_socktype,result->ai_protocol);
 	if (sfd==-1)
 	{
-		fprintf(stderr,"Création erreur \n");
+		fprintf(stderr,"Création d'une erreur \n");
 		exit(EXIT_FAILURE);
 	}
-	
 	//Construction d'une requête (RRQ)
 	char RRQ[50];
 	char * mode="octet";
-	portASCII_size=read(STDOUT_FILENO, portASCII, strlen(portASCII));
-	portASCII[portASCII_size-1]='\0';
+	fileName_Size=read(STDOUT_FILENO, file, strlen(file));
+	file[fileName_Size-1]='\0';
 	RRQ[0]=0;
 	RRQ[1]=1;
 	
-	strncpy(RRQ + 2,portASCII, strlen(portASCII));
-	RRQ[2+strlen(portASCII)]= 0;
-	strncpy(RRQ + 2 + strlen(portASCII) + 1,mode,strlen(mode));
-	RRQ[2 + strlen(portASCII) + strlen(mode) + 1]=0;
-	int lenRRQ = 2 + strlen(portASCII) + 1+ strlen(mode) +1;
+	strncpy(RRQ + 2,file, strlen(file));
+	RRQ[2+strlen(file)]= 0;
+	strncpy(RRQ + 2 + strlen(file) + 1,mode,strlen(mode));
+	RRQ[2 + strlen(file) + strlen(mode) + 1]=0;
+	int lenRRQ = 2 + strlen(file) + 1+ strlen(mode) +1;
 	
+
 	int num_sent=sendto(sfd,RRQ,lenRRQ,0, result->ai_addr,result->ai_addrlen);
 	printf("lenRRQ %d", lenRRQ);
 	printf("RRQ sent :%d bytes \n",num_sent);
@@ -74,9 +66,9 @@ int main (int argc, char * argv[]){
 		perror("error sendto");
 		exit(EXIT_FAILURE);		
 }
-	
+	// buffer pour accueillir les données du serveur 
 	char buf[MAX_BUF_RECEIVE];
-	int f = open(portASCII, O_WRONLY | O_CREAT, 0777);
+	int f = open(file, O_WRONLY | O_CREAT, 0777);
 	
 	int nread = recvfrom(sfd,buf,MAX_BUF_RECEIVE,0,result->ai_addr, &(result->ai_addrlen));
 	
@@ -96,11 +88,56 @@ int main (int argc, char * argv[]){
 	}
 	printf("ACK sent.\n");
 
-	printf("\nRequested file %S successfully downloaded!\n",MAX_BUF_RECEIVE);
+	printf("\nFichier %s bien téléchargé\n",file);
+	
+	
+	// Construction de la requête WRQ
+	
+	char WRQ[50];
+	char*mode1="octet";
+	
+	strcpy(WRQ+2,file);
+	
+	WRQ[2+strlen(file)]=0;
+	
+	strcpy(WRQ+strlen(file)+1,mode1);
+	
+	WRQ[2+strlen(file)+1+strlen(mode)]=0;
+	
+	int lenWRQ=2+strlen(file)+1+strlen(mode)+1;
+	
+	
+	int nsent=sendto(sfd,WRQ,lenWRQ,0,result->ai_addr,result->ai_addrlen);
+	printf("WRQ Sent : %d octets \n",nsent);
+	if (nsent==-1)
+	{
+		perror("error sur le sendto");
+		exit(EXIT_FAILURE);
+	}
+	
+	
+	// Question 5B 
+	// on crée un buffer destiné à recevoir les données du serveur 
+	
+	char data[MAX_BUF_RECEIVE];
+	data[0]=0;
+	data[1]=3;
+	data[2]=0;
+	data[3]=1;
+	
+	int ndata=sendto(sfd,WRQ,lenWRQ,0,result->ai_addr,result->ai_addrlen);
+	
+	char ack[MAX_BUF_RECEIVE];
+	int nack=recvfrom(sfd,ack,MAX_BUF_RECEIVE,0,result->ai_addr,&(result->ai_addrlen));
+	if(nack==-1)
+	{
+		perror("error sur le sendto");
+		exit(EXIT_FAILURE);
+	}
+	printf("ACK sent. \n");
 }
-	
-	
-	
+
+
 	
 	
 	

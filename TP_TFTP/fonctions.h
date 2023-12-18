@@ -8,6 +8,9 @@
 #include <unistd.h>
 #include <time.h>
 #include <fcntl.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+
 
 #define ERROR_MSG "Usage : %s host:port file \n Please try again... \n"
 #define ERROR_CONNECT "Unable to connect on host \n"
